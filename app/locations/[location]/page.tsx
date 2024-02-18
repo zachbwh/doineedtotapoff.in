@@ -19,6 +19,7 @@ export const generateMetadata = ({
     locationEntry?.details && ": " + locationEntry.details
   }`;
   return {
+    metadataBase: new URL("https://doineedtotapoff.in"),
     title,
     description,
     keywords: [
@@ -53,10 +54,10 @@ export default function Location({
 
   return (
     <div className="m-auto max-w-4xl flex items-center flex-col h-full">
-      <H1 className="pb-8">
+      <H1 className="pb-8 text-center">
         Do I need to tap off in {locationEntry.names[0]}?
       </H1>
-      <H2>{locationEntry.tapOffRequired}</H2>
+      <H2 className="text-center">{locationEntry.tapOffRequired}</H2>
     </div>
   );
 }
