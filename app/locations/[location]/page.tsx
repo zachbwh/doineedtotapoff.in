@@ -55,7 +55,7 @@ export default function Location({
     <main className="min-h-screen bg-orange-500 flex w-full">
       <div className="m-auto max-w-4xl flex items-center flex-col h-full">
         <H1 className="pb-8">
-          Do I have to tap off in {locationEntry.names[0]}?
+          Do I need to tap off in {locationEntry.names[0]}?
         </H1>
         <H2>{locationEntry.tapOffRequired}</H2>
       </div>
