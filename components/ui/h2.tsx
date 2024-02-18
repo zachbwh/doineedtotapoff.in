@@ -1,15 +1,15 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-const H1: React.FC<
+const H2: React.FC<
   DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>
 > = ({ children, className }) => {
   return (
-    <h1
-      className={`scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-white ${className}`}
+    <h2
+      className={`scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-white ${className}`}
     >
       {children}
-    </h1>
+    </h2>
   );
 };
 
-export default H1;
+export default H2;
