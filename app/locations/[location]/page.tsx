@@ -5,7 +5,23 @@ import locationEntryMap from "../entries";
 import H2 from "@/components/ui/h2";
 
 const getLocationEntry = (locationName: string): LocationEntry | null => {
-  return locationEntryMap[decodeURIComponent(locationName).toLowerCase()];
+  const decodedLocationName = decodeURIComponent(locationName);
+  const locationEntry = locationEntryMap[decodedLocationName.toLowerCase()];
+  if (locationEntry) {
+    return {
+      ...locationEntry,
+      names: locationEntry.names.sort((a, b) => {
+        if (a === decodedLocationName) {
+          return -1;
+        } else if (b === decodedLocationName) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }),
+    };
+  }
+  return null;
 };
 
 export const generateMetadata = ({
