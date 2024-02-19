@@ -16,13 +16,13 @@ export const MelbourneEntry: LocationEntry = {
       modeType: "BUS",
       localisedName: "Bus",
       tapOffRequired: "YES",
+      details: "Tap off when leaving the bus",
     },
     {
       modeType: "TRAM",
       localisedName: "Tram",
       tapOffRequired: "SOMETIMES",
-      details:
-        "Dont tap on or off if you're only travelling in the free tram zone.",
+      details: "YES if outside the free tram zone.",
     },
   ],
   source: "https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki",
