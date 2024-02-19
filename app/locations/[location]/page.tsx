@@ -5,7 +5,7 @@ import locationEntryMap from "../entries";
 import H2 from "@/components/ui/h2";
 
 const getLocationEntry = (locationName: string): LocationEntry | null => {
-  return locationEntryMap[locationName.toLowerCase()];
+  return locationEntryMap[decodeURIComponent(locationName).toLowerCase()];
 };
 
 export const generateMetadata = ({

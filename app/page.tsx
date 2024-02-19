@@ -8,7 +8,9 @@ export default function Home() {
   const router = useRouter();
 
   const submitHandler: (formData: FormData) => void = (formData) => {
-    router.push(`locations/${formData.get("location")}`);
+    const location = formData.get("location");
+    const encodedLocation = encodeURIComponent(location as string);
+    router.push(`locations/${encodedLocation}`);
   };
 
   return (
