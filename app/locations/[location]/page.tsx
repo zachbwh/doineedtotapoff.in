@@ -1,8 +1,22 @@
 import H1 from "@/components/ui/h1";
-import { LocationEntry } from "../entries/LocationEntry";
+import {
+  LocationEntry,
+  PublicTransportMode,
+  RuleEntry,
+} from "../entries/LocationEntry";
 import { notFound } from "next/navigation";
 import locationEntryMap from "../entries";
 import H2 from "@/components/ui/h2";
+import { Separator } from "@/components/ui/separator";
+import {
+  BusFront,
+  TrainFront,
+  ShipIcon,
+  TramFront,
+  TrainFrontTunnel,
+  LucideProps,
+} from "lucide-react";
+import H3 from "@/components/ui/h3";
 
 const getLocationEntry = (locationName: string): LocationEntry | null => {
   const decodedLocationName = decodeURIComponent(locationName);
@@ -42,7 +56,7 @@ export const generateMetadata = ({
       "Public Transport",
       "Tap Off",
       "Touch Off",
-      "Tag OFF",
+      "Tag Off",
       "Card",
       ...(locationEntry?.names || []),
       locationEntry?.country,
@@ -57,6 +71,37 @@ export const generateMetadata = ({
     },
   };
 };
+
+const props: LucideProps = {
+  size: 56,
+  strokeWidth: 1.5,
+  color: "#FFFFFF",
+  className: "min-w-10 w-10 sm:min-w-12 sm:w-10 md:min-w-14 md:w-14",
+};
+const publicTransportModeIconMap: Record<
+  PublicTransportMode,
+  React.ReactElement
+> = {
+  BUS: <BusFront {...props} />,
+  TRAIN: <TrainFront {...props} />,
+  FERRY: <ShipIcon {...props} />,
+  TRAM: <TramFront {...props} />,
+  METRO: <TrainFrontTunnel {...props} />,
+};
+function Rule({ rule }: { rule: RuleEntry }) {
+  const ruleIcon = publicTransportModeIconMap[rule.modeType];
+  return (
+    <div className="p-4 flex flex-row w-full">
+      {ruleIcon}
+      <div className="pl-4 flex justify-center flex-col">
+        <H3>
+          {rule.localisedName} - {rule.tapOffRequired}
+        </H3>
+        {rule.details}
+      </div>
+    </div>
+  );
+}
 
 export default function Location({
   params: { location },
@@ -74,6 +119,16 @@ export default function Location({
         Do I need to tap off in {locationEntry.names[0]}?
       </H1>
       <H2 className="text-center">{locationEntry.tapOffRequired}</H2>
+      <div className="w-full px-4 mt-12">
+        {locationEntry.rules.map((rule, index) => {
+          return (
+            <>
+              <Rule rule={rule} />
+              {locationEntry.rules.length - 1 > index && <Separator />}
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 }
