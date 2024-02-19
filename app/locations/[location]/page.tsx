@@ -1,12 +1,11 @@
-import H1 from "@/components/ui/h1";
 import {
   LocationEntry,
   PublicTransportMode,
   RuleEntry,
 } from "../entries/LocationEntry";
-import { notFound } from "next/navigation";
 import locationEntryMap from "../entries";
-import H2 from "@/components/ui/h2";
+import { notFound } from "next/navigation";
+import { format } from "date-fns/format";
 import { Separator } from "@/components/ui/separator";
 import {
   BusFront,
@@ -16,6 +15,8 @@ import {
   TrainFrontTunnel,
   LucideProps,
 } from "lucide-react";
+import H1 from "@/components/ui/h1";
+import H2 from "@/components/ui/h2";
 import H3 from "@/components/ui/h3";
 
 const getLocationEntry = (locationName: string): LocationEntry | null => {
@@ -128,6 +129,13 @@ export default function Location({
             </>
           );
         })}
+      </div>
+      <div className="fixed bottom-0 w-full text-center p-4">
+        <a className="underline" target="_blank" href={locationEntry.source}>
+          Source
+        </a>{" "}
+        - Last updated:{" "}
+        {format(new Date(locationEntry.lastChecked), "dd MMM yyyy")}
       </div>
     </div>
   );
