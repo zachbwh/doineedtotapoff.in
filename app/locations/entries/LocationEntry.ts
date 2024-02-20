@@ -1,4 +1,4 @@
-type TapOffRequired = "YES" | "NO" | "SOMETIMES";
+type TapOffRequired = "YES" | "NO" | "USUALLY" | "SOMETIMES";
 // Not exhaustive, mostly meant to map to icons. Names can be localised based on region
 export type PublicTransportMode = "BUS" | "TRAIN" | "FERRY" | "TRAM" | "METRO";
 export type RuleEntry = {

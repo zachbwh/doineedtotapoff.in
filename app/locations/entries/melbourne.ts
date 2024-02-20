@@ -4,19 +4,17 @@ export const MelbourneEntry: LocationEntry = {
   names: ["Melbourne", "Naarm"],
   state: "Victoria",
   country: "Australia",
-  tapOffRequired: "SOMETIMES",
+  tapOffRequired: "USUALLY",
   rules: [
     {
       modeType: "TRAIN",
       localisedName: "Train",
       tapOffRequired: "YES",
-      details: "Tap off when leaving the station",
     },
     {
       modeType: "BUS",
       localisedName: "Bus",
       tapOffRequired: "YES",
-      details: "Tap off when leaving the bus",
     },
     {
       modeType: "TRAM",
