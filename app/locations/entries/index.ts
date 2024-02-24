@@ -11,7 +11,7 @@ import { SydneyEntry } from "./sydney";
 import { WashingtonDCEntry } from "./washington dc";
 import { WellingtonEntry } from "./wellington";
 
-const locationEntries = [
+export const locationEntries = [
   AucklandEntry,
   MelbourneEntry,
   SydneyEntry,
