@@ -60,7 +60,10 @@ function LocationLink({ location }: { location: LocationEntry }) {
   const locationName = location.names[0];
   return (
     <p>
-      <Link href={`/locations/${locationName.toLowerCase()}`}>
+      <Link
+        className="underline p-1 leading-8"
+        href={`/locations/${locationName.toLowerCase()}`}
+      >
         {locationName}
       </Link>
     </p>
@@ -79,12 +82,11 @@ export default function LocationsList() {
           ([countryName, { entries, stateEntries }]) => {
             return (
               <div className="py-4">
-                <H2>{countryName}</H2>
-
+                <H2 className="pb-2">{countryName}</H2>
                 {Object.entries(stateEntries).map(
                   ([stateName, { entries }]) => {
                     return (
-                      <div className="py-2">
+                      <div className="pb-2">
                         <H3>{stateName}</H3>
                         {entries.map((location) => (
                           <LocationLink location={location} />
@@ -94,7 +96,7 @@ export default function LocationsList() {
                   }
                 )}
                 {entries.length > 0 && (
-                  <div className="py-2">
+                  <div className="pb-2">
                     {Object.keys(stateEntries).length > 0 && <H3>Others</H3>}
                     {entries.map((location) => (
                       <LocationLink location={location} />
