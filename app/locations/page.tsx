@@ -56,6 +56,17 @@ const getGroupedLocations = (): GroupedLocations => {
   return groupedLocations;
 };
 
+type GroupedEntry = [name: string, details: any];
+function compareEntriesAlphabetically([a]: GroupedEntry, [b]: GroupedEntry) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  return 0;
+}
+
 function LocationLink({ location }: { location: LocationEntry }) {
   const locationName = location.names[0];
   return (
@@ -77,13 +88,15 @@ export default function LocationsList() {
       <H1 className="pb-8 text-center">Do I need to tap off in?</H1>
       <H1 className="pb-8 text-center">Locations List</H1>
       <div className="w-full px-4 mt-12">
-        {Object.entries(groupedLocations).map(
-          ([countryName, { entries, stateEntries }]) => {
+        {Object.entries(groupedLocations)
+          .sort(compareEntriesAlphabetically)
+          .map(([countryName, { entries, stateEntries }]) => {
             return (
               <div className="py-4" key={countryName}>
                 <H2 className="pb-2">{countryName}</H2>
-                {Object.entries(stateEntries).map(
-                  ([stateName, { entries }]) => {
+                {Object.entries(stateEntries)
+                  .sort(compareEntriesAlphabetically)
+                  .map(([stateName, { entries }]) => {
                     return (
                       <div className="pb-2" key={stateName}>
                         <H3>{stateName}</H3>
@@ -92,8 +105,7 @@ export default function LocationsList() {
                         ))}
                       </div>
                     );
-                  }
-                )}
+                  })}
                 {entries.length > 0 && (
                   <div className="pb-2">
                     {Object.keys(stateEntries).length > 0 && <H3>Others</H3>}
@@ -104,8 +116,7 @@ export default function LocationsList() {
                 )}
               </div>
             );
-          }
-        )}
+          })}
       </div>
     </div>
   );
