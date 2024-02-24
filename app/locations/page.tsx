@@ -72,7 +72,6 @@ function LocationLink({ location }: { location: LocationEntry }) {
 
 export default function LocationsList() {
   const groupedLocations = getGroupedLocations();
-
   return (
     <div className="m-auto max-w-4xl flex items-center flex-col h-full">
       <H1 className="pb-8 text-center">Do I need to tap off in?</H1>
@@ -88,8 +87,8 @@ export default function LocationsList() {
                     return (
                       <div className="pb-2" key={stateName}>
                         <H3>{stateName}</H3>
-                        {entries.map((location) => (
-                          <LocationLink location={location} />
+                        {entries.map((location, index) => (
+                          <LocationLink location={location} key={index} />
                         ))}
                       </div>
                     );
@@ -98,8 +97,8 @@ export default function LocationsList() {
                 {entries.length > 0 && (
                   <div className="pb-2">
                     {Object.keys(stateEntries).length > 0 && <H3>Others</H3>}
-                    {entries.map((location) => (
-                      <LocationLink location={location} />
+                    {entries.map((location, index) => (
+                      <LocationLink location={location} key={index} />
                     ))}
                   </div>
                 )}
