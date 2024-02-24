@@ -18,7 +18,7 @@ export const SydneyEntry: LocationEntry = {
     },
     {
       modeType: "FERRY",
-      localisedName: "Tram",
+      localisedName: "Ferry",
       tapOffRequired: "SOMETIMES",
       details: "YES unless travelling on the Manly F1 service",
     },
