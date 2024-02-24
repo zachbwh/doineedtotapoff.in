@@ -87,7 +87,7 @@ export default function LocationsList() {
     <div className="m-auto max-w-4xl flex items-center flex-col h-full">
       <H1 className="pb-8 text-center">Do I need to tap off in?</H1>
       <H1 className="pb-8 text-center">Locations List</H1>
-      <div className="w-full px-4 mt-12">
+      <div className="w-full px-4 md:mt-12">
         {Object.entries(groupedLocations)
           .sort(compareEntriesAlphabetically)
           .map(([countryName, { entries, stateEntries }]) => {
