@@ -81,12 +81,12 @@ export default function LocationsList() {
         {Object.entries(groupedLocations).map(
           ([countryName, { entries, stateEntries }]) => {
             return (
-              <div className="py-4">
+              <div className="py-4" key={countryName}>
                 <H2 className="pb-2">{countryName}</H2>
                 {Object.entries(stateEntries).map(
                   ([stateName, { entries }]) => {
                     return (
-                      <div className="pb-2">
+                      <div className="pb-2" key={stateName}>
                         <H3>{stateName}</H3>
                         {entries.map((location) => (
                           <LocationLink location={location} />
