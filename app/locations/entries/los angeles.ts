@@ -1,6 +1,6 @@
 import { LocationEntry } from "./LocationEntry";
 
-export const LosAngeles: LocationEntry = {
+export const LosAngelesEntry: LocationEntry = {
   names: ["Los Angeles", "LA"],
   state: "California",
   country: "United States",

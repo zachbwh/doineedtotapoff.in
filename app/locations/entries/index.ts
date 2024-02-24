@@ -3,8 +3,9 @@ import { AdelaideEntry } from "./adelaide";
 import { AucklandEntry } from "./auckland";
 import { ChristchurchEntry } from "./christchurch";
 import { DunedinEntry } from "./dunedin";
-import { LosAngeles } from "./los angeles";
+import { LosAngelesEntry } from "./los angeles";
 import { MelbourneEntry } from "./melbourne";
+import { NewYorkCityEntry } from "./new york city";
 import { SeattleEntry } from "./seattle";
 import { SydneyEntry } from "./sydney";
 import { WellingtonEntry } from "./wellington";
@@ -18,7 +19,8 @@ const locationEntries = [
   ChristchurchEntry,
   DunedinEntry,
   SeattleEntry,
-  LosAngeles,
+  LosAngelesEntry,
+  NewYorkCityEntry,
 ];
 const locationEntryMap: Record<string, LocationEntry> = {};
 // duplicate locations for each name variant so alternative names have their own paths too
