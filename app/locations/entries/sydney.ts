@@ -31,4 +31,6 @@ export const SydneyEntry: LocationEntry = {
   source: "https://transportnsw.info/tickets-opal/opal/tapping-on-tapping-off",
   lastChecked:
     "Sun Feb 20 2024 20:53:52 GMT+1100 (Australian Eastern Daylight Time)",
+  lattidude: -33.865143,
+  longitude: 151.2099,
 };

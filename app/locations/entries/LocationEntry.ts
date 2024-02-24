@@ -18,4 +18,6 @@ export type LocationEntry = {
   rules: RuleEntry[];
   source: string;
   lastChecked: string;
+  lattidude: number;
+  longitude: number;
 };

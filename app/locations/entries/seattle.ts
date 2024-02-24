@@ -26,4 +26,6 @@ export const SeattleEntry: LocationEntry = {
     "https://support.myorca.com/hc/en-us/articles/9286130645389-Paying-for-transit-with-your-ORCA-card",
   lastChecked:
     "Sun Feb 24 2024 11:28:52 GMT+1100 (Australian Eastern Daylight Time)",
+  lattidude: 47.6061,
+  longitude: -122.3328,
 };

@@ -9,4 +9,6 @@ export const DunedinEntry: LocationEntry = {
     "https://www.orc.govt.nz/public-transport/bee-card-the-smart-travel-card",
   lastChecked:
     "Sun Feb 20 2024 21:34:52 GMT+1100 (Australian Eastern Daylight Time)",
+  lattidude: -45.8795,
+  longitude: 170.5006,
 };
