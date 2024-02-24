@@ -26,6 +26,6 @@ export const MelbourneEntry: LocationEntry = {
   source: "https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki",
   lastChecked:
     "Sun Feb 18 2024 16:20:52 GMT+1100 (Australian Eastern Daylight Time)",
-  lattidude: -37.840935,
+  latitude: -37.840935,
   longitude: 144.946457,
 };

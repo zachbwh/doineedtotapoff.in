@@ -9,6 +9,6 @@ export const WellingtonEntry: LocationEntry = {
     "https://www.metlink.org.nz/getting-started/tickets-and-fares-2/using-snapper/",
   lastChecked:
     "Sun Feb 20 2024 21:04:52 GMT+1100 (Australian Eastern Daylight Time)",
-  lattidude: -41.276825,
+  latitude: -41.276825,
   longitude: 174.777969,
 };

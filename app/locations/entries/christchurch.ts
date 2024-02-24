@@ -8,6 +8,6 @@ export const ChristchurchEntry: LocationEntry = {
   source: "https://www.metroinfo.co.nz/metrocard/using-your-metrocard/",
   lastChecked:
     "Sun Feb 20 2024 21:10:52 GMT+1100 (Australian Eastern Daylight Time)",
-  lattidude: -43.52565,
+  latitude: -43.52565,
   longitude: 172.639847,
 };
