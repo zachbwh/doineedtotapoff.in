@@ -2,6 +2,7 @@ import { LocationEntry } from "./LocationEntry";
 
 export const AdelaideEntry: LocationEntry = {
   names: ["Adelaide"],
+  state: "South Australia",
   country: "Australia",
   tapOffRequired: "NO",
   rules: [],
