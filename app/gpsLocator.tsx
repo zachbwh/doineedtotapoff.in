@@ -29,8 +29,7 @@ export default function GpsLocator() {
           );
           if (locationEntries.length > 0) {
             const locationName = filteredLocations[0].names[0];
-            const encodedLocation = encodeURIComponent(locationName);
-            router.push(`locations/${encodedLocation}`);
+            router.push(`locations/${locationName}`);
           } else {
             router.push("locations");
           }

@@ -28,8 +28,7 @@ export default function LocationForm() {
 
   const submitHandler: (formData: FormData) => void = (formData) => {
     const location = formData.get("location");
-    const encodedLocation = encodeURIComponent(location as string);
-    router.push(`locations/${encodedLocation}`);
+    router.push(`locations/${location}`);
   };
 
   return (
