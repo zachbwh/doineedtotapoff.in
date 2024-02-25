@@ -6,24 +6,22 @@ labels: new location
 assignees: zachbwh
 ---
 
-**Location**
+# Location
 
-**Name:** _LOCATION NAME(S)_ (e.g. Melbourne, Naarm)
+**Name(s):** (e.g. Melbourne, Naarm)
 
-**State:** _STATE NAME_ (e.g. Victoria)
+**State:** (e.g. Victoria)
 
-**Country:** _COUNTRY_ (e.g. Australia)
+**Country:** (e.g. Australia)
 
-**Lattitude/Longitude:** -LATITUDE LONGITUDE\_ (e.g. -37.840935,144.946457)
+**Lattitude/Longitude:** (e.g. -37.840935,144.946457)
 
-**Tap Off Required**
-_TAP OFF REQUIRED_ (e.g. YES, NO, USUALLY, SOMETIMES)
+# Rules
 
-**Details**
-_Details_ (e.g. In Berlin you must validate your tickets at a machine before getting on public transport)
+**Tap Off Required:** (e.g. YES, NO, USUALLY, SOMETIMES)
 
-**Mode Specific Rules**
-_MODE SPECIFIC RULES_ (e.g. TRAIN, Overground, YES, Tap off at the overground station platform when switching between the overground/underground to avoid a fine)
+**Details:** (e.g. In Berlin you must validate your tickets at a machine before getting on public transport)
 
-**Source**
-_SOURCE_ (e.g. https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki)
+**Mode Specific Rules:** (e.g. TRAIN, Overground, YES, Tap off at the overground station platform when switching between the overground/underground to avoid a fine)
+
+**Source:** (e.g. https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki)
