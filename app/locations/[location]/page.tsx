@@ -120,7 +120,7 @@ export default function Location({
         Do I need to tap off in {locationEntry.names[0]}?
       </H1>
       <H2 className="text-center">{locationEntry.tapOffRequired}</H2>
-      <div className="w-full px-4 mt-12">
+      <div className="w-full px-4 mt-4 md:mt-12">
         {locationEntry.rules.map((rule, index) => {
           return (
             <>
