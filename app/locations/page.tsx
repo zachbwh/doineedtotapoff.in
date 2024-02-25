@@ -4,24 +4,23 @@ import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import H3 from "@/components/ui/h3";
 import Link from "next/link";
+import { Metadata } from "next";
 
-export const generateMetadata = ({}: {}) => {
-  const title = "Do I Need To Tap Off In - Location List";
-  const description = "Find your city!";
-  return {
-    metadataBase: new URL("https://doineedtotapoff.in"),
+const title = "Do I Need To Tap Off In";
+const description = "Find your city!";
+export const metadata: Metadata = {
+  metadataBase: new URL("https://doineedtotapoff.in"),
+  title,
+  description,
+  keywords: ["Public Transport", "Tap Off", "Touch Off", "Tag Off", "Card"],
+  authors: [{ name: "Zach Huxford" }],
+  creator: "Zach Huxford",
+  publisher: "Zach Huxford",
+  openGraph: {
     title,
     description,
-    keywords: ["Public Transport", "Tap Off", "Touch Off", "Tag Off", "Card"],
-    authors: [{ name: "Zach Huxford" }],
-    creator: "Zach Huxford",
-    publisher: "Zach Huxford",
-    openGraph: {
-      title,
-      description,
-      siteName: "Do I Need To Tap Off In?",
-    },
-  };
+    siteName: "Do I Need To Tap Off In?",
+  },
 };
 
 type GroupedLocations = {
