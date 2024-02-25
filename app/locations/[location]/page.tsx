@@ -51,7 +51,7 @@ export const generateMetadata = ({
   params: { location: string };
 }) => {
   const locationEntry = getLocationEntry(location);
-  const title = `Do I need to tap off ${locationEntry?.names[0]}?`;
+  const title = `Do I need to tap off in ${locationEntry?.names[0]}?`;
   const description = `${locationEntry?.tapOffRequired}${
     locationEntry?.details ? ": " + locationEntry.details : ""
   }`;
