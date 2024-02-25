@@ -32,9 +32,9 @@ const getLocationEntry = (locationName: string): LocationEntry | null => {
     return {
       ...locationEntry,
       names: locationEntry.names.sort((a, b) => {
-        if (a === decodedLocationName) {
+        if (a.toLowerCase() === decodedLocationName.toLowerCase()) {
           return -1;
-        } else if (b === decodedLocationName) {
+        } else if (b.toLowerCase() === decodedLocationName.toLowerCase()) {
           return 1;
         } else {
           return 0;
