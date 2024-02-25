@@ -53,7 +53,7 @@ export const generateMetadata = ({
   const locationEntry = getLocationEntry(location);
   const title = `Do I Have To Tap Off In ${locationEntry?.names[0]}`;
   const description = `${locationEntry?.tapOffRequired}${
-    locationEntry?.details && ": " + locationEntry.details
+    locationEntry?.details ? ": " + locationEntry.details : ""
   }`;
   return {
     metadataBase: new URL("https://doineedtotapoff.in"),
