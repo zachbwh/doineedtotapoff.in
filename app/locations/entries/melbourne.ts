@@ -20,7 +20,7 @@ export const MelbourneEntry: LocationEntry = {
       modeType: "TRAM",
       localisedName: "Tram",
       tapOffRequired: "SOMETIMES",
-      details: "YES if outside the free tram zone.",
+      details: "NO unless travelling within fare zone 2.",
     },
   ],
   source: "https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki",
