@@ -117,6 +117,17 @@ export default function LocationsList() {
             );
           })}
       </div>
+      <div className="w-full text-center p-4">
+        Don't see your town/city? Make a github issue{" "}
+        <a
+          className="underline"
+          target="_blank"
+          href="https://github.com/zachbwh/doineedtotapoff.in/issues/new?assignees=zachbwh&labels=new+location&projects=&template=new-location-request.md&title=Add+_LOCATION_"
+        >
+          here
+        </a>
+        .
+      </div>
     </div>
   );
 }
