@@ -19,6 +19,12 @@ import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import H3 from "@/components/ui/h3";
 
+export function generateStaticParams() {
+  return Object.keys(locationEntryMap).map((locationName) => {
+    return { location: locationName };
+  });
+}
+
 const getLocationEntry = (locationName: string): LocationEntry | null => {
   const decodedLocationName = decodeURIComponent(locationName);
   const locationEntry = locationEntryMap[decodedLocationName.toLowerCase()];
