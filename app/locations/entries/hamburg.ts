@@ -2,6 +2,7 @@ import { LocationEntry } from "./LocationEntry";
 
 export const HamburgEntry: LocationEntry = {
   names: ["Hamburg"],
+  state: "Hamburg",
   country: "Germany",
   tapOffRequired: "NO",
   rules: [],
