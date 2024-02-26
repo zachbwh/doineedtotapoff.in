@@ -122,26 +122,41 @@ export default function Location({
 
   return (
     <div className="m-auto max-w-4xl flex items-center flex-col h-full">
-      <H1 className="pb-8 text-center">
-        Do I need to tap off in {locationEntry.names[0]}?
-      </H1>
-      <H2 className="text-center">{locationEntry.tapOffRequired}</H2>
-      <div className="w-full px-4 mt-4 md:mt-12">
-        {locationEntry.rules.map((rule, index) => {
-          return (
-            <>
-              <Rule rule={rule} />
-              {locationEntry.rules.length - 1 > index && <Separator />}
-            </>
-          );
-        })}
+      <div className="min-h-screen flex flex-col justify-between">
+        <div className="flex flex-col justify-center flex-grow">
+          <H1 className="py-8 text-center">
+            Do I need to tap off in {locationEntry.names[0]}?
+          </H1>
+          <H2 className="text-center">{locationEntry.tapOffRequired}</H2>
+          <div className="w-full px-4 mt-4 md:mt-12">
+            {locationEntry.rules.map((rule, index) => {
+              return (
+                <>
+                  <Rule rule={rule} />
+                  {locationEntry.rules.length - 1 > index && <Separator />}
+                </>
+              );
+            })}
+          </div>
+        </div>
+        <div className="w-full text-center p-4 mt-auto">
+          <a className="underline" target="_blank" href={locationEntry.source}>
+            Source
+          </a>{" "}
+          - Last updated:{" "}
+          {format(new Date(locationEntry.lastChecked), "dd MMM yyyy")}
+        </div>
       </div>
-      <div className="fixed bottom-0 w-full text-center p-4">
-        <a className="underline" target="_blank" href={locationEntry.source}>
-          Source
-        </a>{" "}
-        - Last updated:{" "}
-        {format(new Date(locationEntry.lastChecked), "dd MMM yyyy")}
+      <div className="w-full text-center pt-0 p-4">
+        Something wrong? Create an issue{" "}
+        <a
+          className="underline"
+          target="_blank"
+          href={`https://github.com/zachbwh/doineedtotapoff.in/issues/new?assignees=zachbwh&labels=bad+information&projects=&template=bad-information.md&title=Information+about+${locationEntry.names[0]}+is+wrong+or+missing`}
+        >
+          here
+        </a>
+        .
       </div>
     </div>
   );
