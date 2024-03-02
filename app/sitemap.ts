@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://doineedtotapoff.in",
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     ...Object.keys(locationEntryMap).map((locationName) => {
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://doineedtotapoff.in/locations",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.1,
+      priority: 0.4,
     },
   ];
 }
