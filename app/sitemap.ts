@@ -11,7 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...Object.keys(locationEntryMap).map((locationName) => {
       return {
-        url: `https://doineedtotapoff.in/locations/${locationName}`,
+        url: `https://doineedtotapoff.in/locations/${encodeURIComponent(
+          locationName
+        )}`,
         lastModified: new Date(locationEntryMap[locationName].lastChecked),
         changeFrequency: "weekly",
         priority: 0.95,
