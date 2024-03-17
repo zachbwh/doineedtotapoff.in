@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NotFoundPage() {
   return (
-    <div className="m-auto max-w-4xl flex items-center flex-col h-full">
+    <div className="m-auto max-w-4xl flex items-center justify-center flex-col h-full">
       <H1 className="pb-4">{"Uh oh! We couldn't find this location."}</H1>
       <H2>
         Have a look at our other locations{" "}
