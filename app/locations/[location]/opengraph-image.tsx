@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { ImageResponse } from "next/og";
-import { getLocationEntry } from "./page";
+import { getLocationEntry } from "./get-location-entry";
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 

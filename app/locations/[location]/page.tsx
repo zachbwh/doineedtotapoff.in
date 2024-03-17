@@ -1,8 +1,4 @@
-import {
-  LocationEntry,
-  PublicTransportMode,
-  RuleEntry,
-} from "../entries/LocationEntry";
+import { PublicTransportMode, RuleEntry } from "../entries/LocationEntry";
 import locationEntryMap from "../entries";
 import { notFound } from "next/navigation";
 import { format } from "date-fns/format";
@@ -18,34 +14,13 @@ import {
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import H3 from "@/components/ui/h3";
+import { getLocationEntry } from "./get-location-entry";
 
 export function generateStaticParams() {
   return Object.keys(locationEntryMap).map((locationName) => {
     return { location: locationName };
   });
 }
-
-export const getLocationEntry = (
-  locationName: string
-): LocationEntry | null => {
-  const decodedLocationName = decodeURIComponent(locationName);
-  const locationEntry = locationEntryMap[decodedLocationName.toLowerCase()];
-  if (locationEntry) {
-    return {
-      ...locationEntry,
-      names: locationEntry.names.sort((a, b) => {
-        if (a.toLowerCase() === decodedLocationName.toLowerCase()) {
-          return -1;
-        } else if (b.toLowerCase() === decodedLocationName.toLowerCase()) {
-          return 1;
-        } else {
-          return 0;
-        }
-      }),
-    };
-  }
-  return null;
-};
 
 export const generateMetadata = ({
   params: { location },
