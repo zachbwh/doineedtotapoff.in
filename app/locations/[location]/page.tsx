@@ -25,7 +25,9 @@ export function generateStaticParams() {
   });
 }
 
-const getLocationEntry = (locationName: string): LocationEntry | null => {
+export const getLocationEntry = (
+  locationName: string
+): LocationEntry | null => {
   const decodedLocationName = decodeURIComponent(locationName);
   const locationEntry = locationEntryMap[decodedLocationName.toLowerCase()];
   if (locationEntry) {
